@@ -1,9 +1,6 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 let circleArr = [];
 
 const colors = ["#03A696", "#F2921D", "#D9D0C5", "#A69586", "#F26430"];

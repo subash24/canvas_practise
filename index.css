@@ -5,18 +5,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 h1 {
   font-size: 6vw;
   font-family: monospace;
-  line-height: 48px;
+  line-height: 6vw;
   color: #fff;
+}
+
+.wrapper {
+  max-width: 60%;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 a {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 28px;
   color: bisque;
 }
