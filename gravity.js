@@ -2,10 +2,27 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const gravity = 0.7;
-const friction = 0.7;
+const friction = 0.6;
 const maxRadius = 100;
 let mouseHold = false;
 let mousePosition = { x: undefined, y: undefined };
+
+const colors = [
+  "#026E81",
+  "#00ABBD",
+  "#0099DD",
+  "#FF9933",
+  "#A1C7E0",
+  "#D4A1DB",
+  "#FBAB86",
+  "#FA6658",
+  "#C5CFC7",
+  "#D081F4",
+];
+
+const getColor = () => {
+  return colors[Math.floor(Math.random() * colors.length)];
+};
 
 class Shape {
   constructor({ position, velocity, radius, color = "red" }) {
@@ -55,6 +72,7 @@ let ballArr = [];
 
 addEventListener("mousedown", () => {
   mouseHold = true;
+
   ballArr.push(
     new Shape({
       position: {
@@ -63,6 +81,7 @@ addEventListener("mousedown", () => {
       },
       velocity: { x: 0, y: 0 },
       radius: 2,
+      color: getColor(),
     })
   );
 });

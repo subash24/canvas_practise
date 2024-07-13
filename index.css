@@ -1,11 +1,14 @@
 body {
   height: 100dvh;
-  background-color: #0099dd;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+body.home {
+  background-color: #0099dd;
 }
 
 h1 {
@@ -27,4 +30,11 @@ a {
   font-size: 20px;
   line-height: 28px;
   color: bisque;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

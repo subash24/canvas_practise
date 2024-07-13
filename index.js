@@ -12,12 +12,12 @@ const initHome = () => {
       label: "Gravity",
       path: "gravity",
     },
+    {
+      label: "Collision",
+      path: "collision",
+    },
   ];
-  let link = document.createElement("link");
-  link.href = "./index.css";
-  link.type = "text/css";
-  link.rel = "stylesheet";
-  document.head.appendChild(link);
+  document.body.classList.add("home");
   const h1 = document.createElement("h1");
   const div = document.createElement("div");
   const a = document.createElement("a");
@@ -49,14 +49,12 @@ window.onload = () => {
   const query = window.location.search.split("?").pop();
   const params = new URLSearchParams(query);
   const path = params.get("page");
+
   switch (path) {
     case "basic-shapes":
-      importScript(path);
-      break;
     case "circle-dash":
-      importScript(path);
-      break;
     case "gravity":
+    case "collision":
       importScript(path);
       break;
     default:
