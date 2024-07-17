@@ -16,6 +16,10 @@ const initHome = () => {
       label: "Collision",
       path: "collision",
     },
+    {
+      label: "Sprite",
+      path: "sprite",
+    },
   ];
   document.body.classList.add("home");
   const h1 = document.createElement("h1");
@@ -38,6 +42,7 @@ const importScript = (path) => {
   const script = document.createElement("script");
 
   script.src = `./${path}.js`;
+  script.type = "module";
   const canvas = document.createElement("canvas");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -55,6 +60,7 @@ window.onload = () => {
     case "circle-dash":
     case "gravity":
     case "collision":
+    case "sprite":
       importScript(path);
       break;
     default:

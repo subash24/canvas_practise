@@ -38,3 +38,9 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.sprite-animation-dropdown {
+  position: absolute;
+  top: 40%;
+  right: 40%;
+}
